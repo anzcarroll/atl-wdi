@@ -16,23 +16,39 @@ Please do not use any resource other than the class wiki
 to answer these questions.
 
 1.  What are the three requirements for completing this course?
+homework submission of >=80%
+consistent attendance
+unit projects must be submitted and upto GA graduation standards
 2.  At what URL can you find a series of videos covering the terminal, created
     by one of GA's senior instructors?
+    https://www.youtube.com/playlist?list=PLdnONIhPScSToZztXRHyKZTQEsE30luMx
 3.  What book by Douglas Crockford is on our recommended reading list?
+Javascript the Good Parts
 4.  According to our Git style guide, when writing the detailed description of
     a commit in its commit message, what three types of things are most
     important to mention?
-5.  What does a bug report need to have before it can be submitted to the bug
-    journal?
+    never use -m to git commit
+    add ~/.vimrc to spell check
+    first line <50 characters, followed by blank line
+5.  What does a bug report need to have before it can be submitted to the bug journal?
+error msg
+copy of error code
+paragraph including: what you thought error was, what it actually was, solution.
 6.  There are three Git tutorials referenced in the Wiki. What are they?
+atlassian
+git cheatsheat
+git styleguide
 7.  List at least two basic UI styling tips that will help your projects
     look good.
-8.  What is the maximum number of absences a student can have, and how many
-    'tardies' are equal to an absence?
+    don't use bullet styling
+    don't go font crazy
+    don't use true black
+8.  What is the maximum number of absences a student can have, and how many 'tardies' are equal to an absence?
+3 absences // 3 tardies = abscence
 9.  Where can you find a directory of publicly-accessible APIs?
     Give at least one URL.
-10. What two holidays will we have during this course (not counting the long
-    winter break)?
+    https://nycopendata.socrata.com/
+10. What two holidays will we have during this course (not counting the long winter break)?
 
 ## Submitting Your Work
 
