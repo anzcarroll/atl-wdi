@@ -65,4 +65,4 @@ The issue body should have:
     ```
 
 -   A 'comfort' score on how you feel about your answers, from 1 (very
-    uncomfortable) to 5 (very comfortable)
+    uncomfortable) to 5  (very comfortable)
