@@ -11,9 +11,12 @@
 // Output: the sum of the numbers that were passed in
 // Edge Case: If the array is empty, return 0
 var sumOfNums = function(numsArray){
-  // Your Code Here
-};
-
+  var sum = 0;
+  for (var i = 0; i <= numsArray.length; i++) {
+    sum = numsArray[i];
+  }
+  return (sum);
+}
 // #2
 // Input: an array of numbers
 // Output: an array of the numbers from the first array that are strictly
