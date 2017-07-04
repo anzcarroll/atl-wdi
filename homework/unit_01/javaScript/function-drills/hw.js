@@ -38,20 +38,20 @@ var numsGreaterThanTen = function(numsArray){
 // Edge Case: If the input array is empty, the function should return `true`.
 var allGreaterThanTen = function(numsArray){
    for (var i = 0; i < numsArray.length; i++) {
-    if (numsArray !> 10) {
-      return "false";
+    if (numsArray[i]> 10) {
+      return true;
     }
   else {
-    return true;   
+    return false;   
 };
 
 // #4
 // Input: an array of words
 // Output: an array of all words from the first array with five or more letters
 var wordsWithAtLeastFiveLetters = function(words){
-  var results = [ letter, better, clever, sweater];
-  if 
-  return =
+ var moreThan5 = []; {
+   if 
+ }
 };
 
 // #5
