@@ -44,12 +44,12 @@ while (resSix.length >= 5) {
 // 7. Write a `while` loop that increases `resSeven` by 12 when it's strictly
 //    below 95, decreases it by 7 when it's strictly above 105, and stops as
 //    soon as `resSeven` equals or falls between those two values.
-????????
-var resSeven = 99;
-while (resSeven < 95) {
-  if (resSeven += 12); {
-while (resSeven > 105)
-  return (resSeven -= 7);
+var resSeven ;
+while (resSeven < 95 || resSeven > 105) {
+  if (resSeven < 95) {
+   resSeven += 12;
+   else (resSeven > 105)
+   return resSeven -= 7;
 }
 
  

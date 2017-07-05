@@ -60,7 +60,10 @@ var wordsWithAtLeastFiveLetters = function(words){
 //          `false` otherwise
 // Edge Case: If the array is empty, the function should return `true`.
 var allStartingWithA = function(words){
-  // Your Code Here
+ for (var i = 0; i < words.length; i++) {
+if (words[i].slice(0, 1) === 'a' || words[i].slice(0, 1) === 'A') {
+ return true;
+ 
 };
 
 // #6
