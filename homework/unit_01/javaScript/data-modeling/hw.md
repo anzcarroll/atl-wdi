@@ -80,12 +80,12 @@ var taskTwo ={
   name: 'sweep';
   completion: 'false';
   dateCompleted: 'unfinished';
-}
+};
 var project = {
   name: 'Moms house';
   description: 'cleaned moms house';
   setOfTasks: []
-}
+};
 
 ### 2. Photo Sharing App
 
@@ -109,18 +109,18 @@ var user = {
   name: "Johnny Bravo";
   uploadedPhotos: ['frostedFlakes.jpg', 'beachSunset.jpg', 'sideView.jpg'];
   albumsCreated: ['Favorite Cereals', 'Fantastic Trips', 'My Hair'];
-}
+};
 var photo = {
   name: 'best cereal of 2000';
   dateAdded: 'JUN102009'; 
   url: 'JohnnyBravo/downloads/cool_shit/img312121.jpg';
-}
+};
 
 var album = {
   name: 'My Hair';
   dateOfLastUpload:;
   set:['sideView.jpg', 'upside_down.jpg', 'selfiesRus.jpg'];
-}
+};
 
 ### 3. Home Automation Manager
 
@@ -129,15 +129,48 @@ track of the time and temperature of the house that it monitors, and use that
 information to turn on and off different lights and adjust the thermostat up
 and down.
 
-> Answer here
+> a light has....
+level of light
+location
 
+> a house has....
+lights
+temp
+>
+var light = {
+location: 'dining room';
+brightness: 'medium-dim';
+};
+
+var homeAutoSystem = {
+temperature:'70 degrees';
+lightsInHouse: ['dining room', 'bedroom', 'gameroom', 'bathroom1', 'bathroom2']
+};
 ### 4. Sneaker Store
 
 This app will allow customers to browse a list of products (sneakers, in this
 case), add those products to a cart, and save that cart as a past order once the
 purchase is complete.
 
-> Answer here
+>
+var product = {
+  name: 'Vans Red Checker';
+  description: 'slip-on'
+  style: 'womens';
+  price: 23.99;
+};
+
+var shoeItem = {
+product: 'Vans Slip-on Classic';
+quantity: 1;
+};
+
+var orders = {
+numberOfItems: 6;
+dateOrdered: [];
+orderStatus: [];
+};
+
 
 ## Representing Abstractions in Code
 
@@ -194,6 +227,9 @@ var exampleLine = {
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
 
 > Answer here
+Advantage:
+Disadvantage:
+
 
 ### 6. Doctor Appointment App
 
@@ -300,6 +336,8 @@ the better choice?
 
 ## Tying It Together
 
+
+
 ### 7. Tic-Tac-Toe
 
 You've been tasked with building an in-browser tic-tac-toe game.
@@ -308,12 +346,23 @@ a.  What are some possible entities that your application might use to model its
     data? Please pick at least two, with at least two properties apiece.
 
   > Answer here
+  var gameInstructions = {
+    numberOfPlayers: 2;
+    possibleWaysToWin: 100;
+  }
+  var gamePieces = {
+    numberOfPossibleMoves: 200;
+    name:['X', 'O'];
+    postion: []
+  }
 
 b.  How might those entities be represented in JavaScript code?
 
   > Answer here
+  (REFER TO ABOVE CODE)
 
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
 
   > Answer here
+  these will be vital pieces of information in order to play the game.
