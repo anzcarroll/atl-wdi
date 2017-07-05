@@ -55,18 +55,72 @@ sense for the use case of the app.
 
 ### 1. To-Do List
 
+
 This app will be an app for tracking and managing tasks. Not only will it keep
 track of whether tasks have been completed, it will also keep track of
 how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
-> Answer here
+> a Task has...
+a name
+if completed
+when completed
+
+>a Project has..
+a name
+a description
+tasks completed
+
+var taskOne = {
+  name: 'vacuum';
+  completion: true;
+  dateCompleted: '04/03/12';
+};
+var taskTwo ={
+  name: 'sweep';
+  completion: 'false';
+  dateCompleted: 'unfinished';
+}
+var project = {
+  name: 'Moms house';
+  description: 'cleaned moms house';
+  setOfTasks: []
+}
 
 ### 2. Photo Sharing App
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
 > Answer here
+>user has...
+username
+set of photos
+set of albums
+>photos have...
+a name
+a date
+a location
+>albums have....
+last updated 
+a name
+set of photos
+
+var user = {
+  name: "Johnny Bravo";
+  uploadedPhotos: ['frostedFlakes.jpg', 'beachSunset.jpg', 'sideView.jpg'];
+  albumsCreated: ['Favorite Cereals', 'Fantastic Trips', 'My Hair'];
+}
+var photo = {
+  name: 'best cereal of 2000';
+  dateAdded: 'JUN102009'; 
+  url: 'JohnnyBravo/downloads/cool_shit/img312121.jpg';
+}
+
+var album = {
+  name: 'My Hair';
+  dateOfLastUpload:;
+  set:['sideView.jpg', 'upside_down.jpg', 'selfiesRus.jpg'];
+}
 
 ### 3. Home Automation Manager
 
