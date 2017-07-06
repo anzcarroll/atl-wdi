@@ -227,8 +227,8 @@ var exampleLine = {
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
 
 > Answer here
-Advantage:
-Disadvantage:
+Advantage: each station name can be used
+Disadvantage: if the app is tryig to tell how many stops it is to travel from one station to another than above isn't storing that info
 
 
 ### 6. Doctor Appointment App
@@ -333,6 +333,9 @@ other? Are there any circumstances in which the other representation might be
 the better choice?
 
 > Answer here
+I feel like example 1 is easier to read and to find all appts for specified doctor.
+example 2 makes it easier to find appointments for specified patient.
+I would say example2 would be more fitting considering how muchmore relavent it is for a patient to see all of their appointments vs all the appointments that the doctor has for the day?
 
 ## Tying It Together
 
@@ -348,13 +351,14 @@ a.  What are some possible entities that your application might use to model its
   > Answer here
   var gameInstructions = {
     numberOfPlayers: 2;
-    possibleWaysToWin: 100;
-  }
+    possibleWaysToWin: x;
+    user:;
+  };
   var gamePieces = {
-    numberOfPossibleMoves: 200;
+    possibleMoves: 200;
     name:['X', 'O'];
     postion: []
-  }
+  };
 
 b.  How might those entities be represented in JavaScript code?
 
