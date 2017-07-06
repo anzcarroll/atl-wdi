@@ -4,13 +4,21 @@
 
 var timerUI = {
   drawNumericDisplay: function(timerValue){
-    // Your Code Here
+    document.getElementById('numeric-display').innerHTML = timerValue;
   },
+
   drawProgressBars: function(timerValue){
-    // Your Code Here
-  },
+    var timeElapsed = 100-timerValue;
+    document.getElementsByClassName('progress-bar')[0].style.width = timeElapsed + "%";
+     },
+
+
   drawLitFuses: function(timerValue){
-    // Your Code Here
+    var litUp = timerValue / 100;
+   document.getElementsByClassName('burnt')[0].style.width = litUp *98 + "%";
+   document.getElementsByClassName('unburnt')[0].style.width = (1 - litUp)*98 + "%";
+
+  //  document.getElementsByClassName('flame')[0].width =
   },
   drawCrawlers: function(timerValue){
     // Your Code Here
