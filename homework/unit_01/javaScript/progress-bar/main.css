@@ -9,9 +9,17 @@ padding: 15px;
 text-align: center;
 font-family: 'Ubuntu', sans-serif;
 font-size: 2em;
-
 }
 
+
+h2 {
+  text-align: center;
+  font-size: 7em;
+  background-color: black;
+  color: darkslategray;
+  margin: 0;
+  padding; 0;
+}
 
 .component {
   background-color: grey;
