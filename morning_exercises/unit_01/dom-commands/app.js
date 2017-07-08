@@ -47,7 +47,15 @@ quote.innerHTML = `${randomQuote.quote} -${randomQuote.author}`
 quote.style.fontSize = "36px"
 quote.style.paddingLeft = "50px"
 
+function quotesToList(quotes) {
+ var list = document.getElementById('quotesList');
+for (var i= 0; i < quotes.length; i++)
+ var quote = document.createElement('li');
+ quote.innerHTML = `${quotes[i].quote}, by ${quotes[i].author}`;
+ list.appendChild(quote);
+ 
+};
 
-document.body.appendChild(quote);
+window.onLoadDocument = quotesToList(quotes);
 
 

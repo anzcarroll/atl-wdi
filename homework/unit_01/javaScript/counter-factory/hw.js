@@ -47,24 +47,42 @@ const CounterCollection = {
 
 // UI //
 const Presenter = {
-  insertCounterComponent: function(newCountId){
-    console.log(`insert counter component #${newCountId}`);
-    // Your Code Here
-  },
+insertCounterComponent: function(newCountId){
+   console.log(`insert counter component #${newCountId}`);
+let newCountComp = document.createElement('div');
+newCountComp.innerHTML =
+    `<h3>Count: <span>0</span></h3><button class='increment'> + 1 </button></div>`;
+newCountComp.className += ' counter';
+newCountComp.getElementsByClassName('increment')[0].onClick = AppController.onClickNewCounter;
+newCountComp.dataset.countId = newCountId;
+document.getElementById('counter-list').appendChild(newCountComp);
+},
+
+  
   refreshCounterComponent: function(countId){
     console.log(`refresh counter component #${countId}`);
-    // Your Code Here
-  },
+    // find the ID as to what (countId is referring to)
+    //get value of countersUIComponent 
+    //match that value to counters current value 
+    //
+//   let value = counterCollection.getCounterValue(countId);
+//  document.
+//your code here
+},
+ 
   removeCounterComponent: function(countId){             // REACH
     console.log(`remove counter component #${countId}`);
     // Your Code Here
+    
+
   }
 };
 
 // Top-Level Application Control //
 const AppController = {
   onClickNewCounter: function(event){
-    // Your Code Here
+   CounterCollection.createCounter(); 
+    Presenter.insertCounterComponent();
   },
   onClickIncrement: function(event){
     // Your Code Here
