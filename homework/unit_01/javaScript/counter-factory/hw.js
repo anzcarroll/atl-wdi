@@ -61,18 +61,14 @@ document.getElementById('counter-list').appendChild(newCountComp);
   
   refreshCounterComponent: function(countId){
     console.log(`refresh counter component #${countId}`);
-    // find the ID as to what (countId is referring to)
-    //get value of countersUIComponent 
-    //match that value to counters current value 
-    //
-//   let value = counterCollection.getCounterValue(countId);
-//  document.
-//your code here
+     let value = CounterCollection.getCounterValue(countId);
+    document.querySelector('span').innerHTML = value;  
 },
  
   removeCounterComponent: function(countId){             // REACH
     console.log(`remove counter component #${countId}`);
     // Your Code Here
+  
     
 
   }
@@ -86,9 +82,13 @@ const AppController = {
   },
   onClickIncrement: function(event){
     // Your Code Here
+    CounterCollection.incrementCounter();
+    Presenter.refreshCounterComponent();
   },
   onClickDelete: function(event){                           // REACH
     // Your Code Here
+    // CounterCollection.destroyCounter(countId);
+    // Presenter.removeCounterComponent(event);
   }
 };
 
