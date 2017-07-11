@@ -62,7 +62,21 @@ document.getElementById('counter-list').appendChild(newCountComp);
   refreshCounterComponent: function(countId){
     console.log(`refresh counter component #${countId}`);
      let value = CounterCollection.getCounterValue(countId);
-    document.querySelector('span').innerHTML = value;  
+     //find button
+     let $button = $('add-one');
+     //add event listener to the button
+     button.on('click', function() {
+
+     
+     //inside listener callback : 
+          //find the span to get current value 
+         let currentValue =  $('#current-counter').val();
+         let currentValAsInt = parseInt(currentValue);
+          //add one to the current value span
+          currentValueAsInt += 1;
+          //change span to new value 
+          $('#current-counter').html(currentValAsInt);
+             
 },
  
   removeCounterComponent: function(countId){             // REACH
@@ -72,7 +86,7 @@ document.getElementById('counter-list').appendChild(newCountComp);
     
 
   }
-};
+});
 
 // Top-Level Application Control //
 const AppController = {
@@ -93,5 +107,5 @@ const AppController = {
 };
 
 window.onload = function(){
-  document.getElementById('new-counter').onclick = AppController.onClickNewCounter;
+  document.getElementById('current-counter').onclick = AppController.onClickNewCounter;
 };
