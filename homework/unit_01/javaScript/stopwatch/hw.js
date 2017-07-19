@@ -5,6 +5,7 @@
 /// Data & Core Business Logic ///
 const Stopwatch = {
   tickClock: function(){
+    console.log("working");
     if (Stopwatch.isRunning) {
       setTimeout(Stopwatch.tickClock, 10); // trigger next clock tick
       Stopwatch.advanceTenMillisecs();
@@ -19,49 +20,58 @@ const Stopwatch = {
   // DO NOT EDIT ABOVE THIS LINE
   advanceTenMillisecs: function(){
     // Your Code Here
-    //  this.millisecs += 10;
-    // if (this.millisecs >= 1000) {
-    //   this.millisecs -= 1000;
-    //   this.secs++;
-    // }
-    // if (this.secs >= 60) {
-    //   this.secs -= 60;
-    //   this.mins++;
-    // }
+    this.millisecs += 10;
+  if (this.millisecs >= 1000) {
+  this.millisecs -= 1000;
+  this.sec += 1;
+}
+if (this.millisecs <= 60) {
+
+}
   },
+
   reset: function(){
     // Your Code Here
     this.mins = 0;
     this.secs = 0;
     this.millisecs = 0;
     this.laps = 0;
-
+    console.log(reset()); 
   },
   start: function(){
     // Your Code Here
-    if (!(this.isRunning {
+    if (!this.isRunning) {
       this.isRunning = true;
+      this.tickClock();
     }
   },
-  stop: function(){
-    // Your Code Here
-    this.isRunning = false; 
-    }
-  },
-  lap: function(){
-    // Your Code Here
-    // if (!this.isRunning) {
-    // laps.push('mins', 'secs', 'millisecs')
-       }
-    }
-  }
+//   stop: function(){
+//     // Your Code Here
+//     this.isRunning = false; 
+//     }
+//   },
+//   // lap: function(){
+//   //   // Your Code Here
+//   //   // if (!this.isRunning) {
+//   //   // laps.push('mins', 'secs', 'millisecs')
+//   //     }
+//   //   }
+//   // }
 };
 
 /// User Interface ///
 const ViewEngine = {
   updateTimeDisplay: function(mins, secs, millisecs){
-    // Your Code Here
-     //find the mins, secs, millisecs
+//     1.  It displays the values of minutes, seconds, and (tens of)
+//     milliseconds elapsed in the DOM element with id `time-display`, in
+//     the format `MM:SS:ss` (e.g. `100:01:34`, `05:01:10`), starting with
+//     `00:00:00`.
+var timeDisplayString = `${mins}:${secs}:${miilisecs}`:
+//turn time into string
+//find time display DOM element and set string as inner html
+
+// 2.  It pads the values of minutes, seconds, and (tens of) milliseconds
+//     with zeros so that the strings are at least two characters long.
     $('#mins').html()
     $('#secs').html()
     $('millisecs').html()
@@ -94,12 +104,16 @@ const AppController = {
   },
   handleClickStart: function() {
     // Your Code Here
-    if (Stopwatch.isRunning) { Stopwatch.start()};
+    if (!Stopwatch.isRunning) {
+    Stopwatch.start()
+      };
+      console.log("button is working!");
   },
   handleClickStopReset: function(){
-    // Your Code Here
+   // Your Code Here
     if (Stopwatch.isRunning {
       Stopwatch.stop();
+
     }
     if (!Stopwatch.isRunning) {
       Stopwatch.reset();
@@ -115,6 +129,12 @@ const AppController = {
   }
 };
 
-window.onload = function(){
+$(function(){
   // Attach AppController methods to the DOM as event handlers here.
+$('#start').on('click', function (event) {
+  event.stopPropogation();
+  AppController.handleClickStart();
+}
+
+
 };
