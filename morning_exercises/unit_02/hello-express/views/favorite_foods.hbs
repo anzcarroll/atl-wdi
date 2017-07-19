@@ -1,0 +1,7 @@
+<h1>My Favorite Foods</h1>
+{{!--//for each elementy of the array of data--}}
+<ul>{{#each data}}
+{{!--//grab the element and pop it inside a list (each array of [i] is going to be called "this" in hbs)--}}
+    <li>{{this}}</li>
+{{/each}}
+</ul>
