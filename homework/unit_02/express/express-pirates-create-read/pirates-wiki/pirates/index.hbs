@@ -1,0 +1,13 @@
+<h1> these are my mateys</h1>
+<h1>there are now {{pirates.length}} on our list</h1>
+<a href="/pirates/new">GO CREATE YOUR PIRATE</a>
+
+<ol>
+{{#each pirates}}
+    <li>NAME:<a href="./pirates/{{@index}}">{{name}}</li>
+    <li>BIRTHPLACE:{{birthplace}}</li>
+    <li>YEAR OF DEATH:{{death_year}}</li>
+    <li>BASE:{{base}}</li>
+    <li>NICKNAME:{{nickname}}</li>
+{{/each}}
+</ol>
