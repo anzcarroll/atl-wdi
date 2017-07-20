@@ -1,0 +1,19 @@
+<h1>create a new todo!</h1>
+
+{{!--instead of GET /todos we are POSTing /todos--}}
+<form method="POST" action="/todos">
+
+
+<label for="description">Description:</label>
+<input name="description"></input>
+<br>
+<label for="urgent">urgent: </label>
+  <span>yes</span><input type='radio' name='urgent' value="true" checked>
+  <span>no</span><input type='radio' name='urgent' value="false"/>
+<button>SUBMIT</button>
+ </form>
+ <div>
+
+</div>
+<br><br><br>
+  <a href="/">GO TO INDEX</a>

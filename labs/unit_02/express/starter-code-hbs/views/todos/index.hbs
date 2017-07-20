@@ -1,7 +1,8 @@
-<h1> Todos </h1>
+<h1> you have {{todos.length}} of Todos</h1>
+ <a href="todos/new">GO TO NEW PAGE</a>
 <ul>
   {{#each todos}}
-    <li>Description: {{description}}</li>
+    <li>Description:<a href="/todos/{{@index}}">{{description}}</a></li>
     <li>Urgent: {{urgent}}</li>
     <br>
   {{/each}}
