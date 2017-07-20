@@ -1,10 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/order/:amount/:size', function(req, res, next) {
-
-     res.render('', {
-
+router.get('/:amount/:size', function(req, res, next) {
+     res.render(':amount/:size', {
+       data: `${req.params.amount} ${rq.params.size} pizzas!` 
      });
  });
 
@@ -12,4 +11,4 @@ router.get('/order/:amount/:size', function(req, res, next) {
 
 
 
-module.export = router;
+module.exports = router;
