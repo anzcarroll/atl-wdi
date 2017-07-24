@@ -18,7 +18,8 @@ const Tamagotchies =(function(name, creatureType) {
     console.log(this.foodInTummy + " BARFFFFF!");
     })
     this.yawn(function(){
-    this.
+    this.restedness--;
+    console.log(this.name + "has current restedness of: " + this.restedness);
     })    
 });
 
