@@ -71,7 +71,7 @@ pirates.seededPirates.push(newPirate);
 res.redirect('/pirates');
 });
 
-/* DEEEEELETE TODO */
+/* DEEEEELETE */
 router.delete('/:id', (req, res) => {
     pirates.seededPirates.splice('req.params.id', 1);
     res.redirect("/pirates");

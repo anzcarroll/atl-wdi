@@ -1,0 +1,22 @@
+<h1>edit  {{pirates.name}}</h1>
+
+<form method="POST" action="/pirates/{{id}}?_method=PUT">
+    <label for="name">Name:</label>
+    <input name="name" value="{{pirates.name}}"></input>
+<br>
+ <label for="birthplace">Birthplace:</label>
+    <input name="birthplace" value="{{pirates.birthplace}}"></input>
+<br>
+<label for="death_year">Year Of Death:</label>
+<input name="death_year" value="{{pirates.death_year}}"></input>
+<br>
+<label for="base">Base:</label>
+<input name="base" value="{{pirates.base}}"></input>
+<br>
+<label for="nickname">Nickname:</label>
+<input nickname="nickname" value="{{pirates.nickname}}"></input>
+   <br><br><br>
+    <button>UPDATE THE pirates</button>
+</form>
+
+

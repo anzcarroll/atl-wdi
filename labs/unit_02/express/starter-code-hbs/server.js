@@ -4,23 +4,24 @@ const logger      = require('morgan');
 const express     = require('express');
 const hbs         = require('hbs');
 const bodyParser  = require('body-parser');
+const methodOverride = require('method-override');
 
 
 /* app settings*/
-const app         = express();
-const port        = process.env.PORT || 3000;
+const app = express();
+const port = process.env.PORT || 3001;
 
 
 /* set up the application params*/
 const toDoController = require('./controllers/todos');
 
 
-// log
+// log -- always put middleware before calling routes/reads top to bottom
 app.use( logger('dev'));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-
+app.use(methodOverride('_method'));
 /*Views*/
 app.set('view engine', 'hbs');
 

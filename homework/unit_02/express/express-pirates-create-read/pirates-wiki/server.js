@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 const pirateController = require('./controllers/pirates');
 
@@ -19,7 +19,7 @@ app.set('view engine', 'hbs');
 
 /* HOME */
 app.get('/', function(req,res) {
-  res.send('This is our Home Page');
+  res.send('test index page');
 });
 
 
