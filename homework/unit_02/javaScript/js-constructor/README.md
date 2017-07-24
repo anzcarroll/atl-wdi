@@ -46,7 +46,8 @@ We refer to the properties that will exist within that generated object by using
 
 * Write a constructor function for a Tamagotchi
 * Using `this.propertyName = value`, add `foodInTummy`, `restedness`, and `health` as properties and set each of the values to 10.
-* Add in a method called `cry`. The `cry` function should reduce `foodInTummy` by 1, console.log the new value of `foodInTummy`, and console.log "WAHH!!!".
+* Add in a method called `cry`. The `cry` 
+ console.log the new value of `foodInTummy`, and console.log "WAHH!!!".
 * Make two `new` tamagotchis
 * Invoke each tamagotchi's `cry` method
 * :dart: Git add, and commit -m "part 1: created Tamagotchi constructor"
