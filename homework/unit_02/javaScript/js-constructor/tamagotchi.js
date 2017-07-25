@@ -32,3 +32,24 @@ console.log(constructThing1);
 console.log(constructThing2);
 console.log(constructThing1.cry());
 
+this.start = function() {
+    console.log("Starting " + this.name);
+    var self = this;
+self.yawnTimer = setInterval(function(){
+    self.yawn();
+
+}, 10000)
+self.hungerTimer = setInterval(function(){
+    self.foodInTummy();
+}, 6000)
+self.pukeTimer = setInterval(function(){
+    self.puke();
+}, 2000)
+
+this.stop = function(){
+    console.log("stopping this " + this.name)
+    clearInterval(this.yawnTimer);
+    clearInterval(this.hungerTimer);
+    clearInterval(this.pukeTimer);
+  };
+}
