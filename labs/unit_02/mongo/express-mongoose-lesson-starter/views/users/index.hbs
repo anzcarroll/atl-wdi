@@ -1,0 +1,8 @@
+<h1>HEY IM AN INDEX PAGE </h1>
+
+
+{{#each users}}
+ <div>name: {{this.first_name}}</div>
+ <div>email: {{this.email}}</div>
+ <a href="/users/{{this._id}}/delete">DELETE {{users.first_name}}</a>
+{{/each}}
