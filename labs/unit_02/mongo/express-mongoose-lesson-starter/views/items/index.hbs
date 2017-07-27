@@ -1,0 +1,7 @@
+<h1>HEY IM AN INDEX PAGE of {{userName}}'s Items</h1>
+
+
+{{#each items}}
+ <div>item name: {{this.name}}</div>
+ <a href="/users/{{../userId}}/items/{{this._id}}">Show Item</a>
+{{/each}}

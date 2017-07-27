@@ -6,15 +6,18 @@ var methodOverride = require('method-override');
 
 var app = express();
 
+app.use('methodOverride', ('_method'));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-app.use('methodOverride'('_method'));
 
 app.set('view engine', 'hbs');
 
 var usersController = require("./controllers/usersController.js");
 app.use('/users', usersController);
+
+var itemsController = require("./controllers/itemsController.js");
+app.use('/users/:id/items', itemsController);
 
 // Mongoose stuff
 var mongoose = require('mongoose');
