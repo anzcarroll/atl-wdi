@@ -9,7 +9,6 @@ var Donut = require("../models/donuts.js");
 
 
 router.get('/donuts', function(req, res) {
-	res.send('IM ALIVE')
 	var newDonuts = [
 			{
 					name: "Sprinkles",
