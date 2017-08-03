@@ -1,4 +1,4 @@
-export default [
+const pizzaData = [
   {
     name: "HONEY BBQ CHICKEN DELUXE",
     price: 16.75,
@@ -87,3 +87,4 @@ export default [
         image: require('./images/pizza11.jpg')
   }
 ];
+export default pizzaData;
