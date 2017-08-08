@@ -12,7 +12,11 @@ class App extends Component {
     super();
     this.state = {
       idToSearch: "",
-      titleToSearch: ""
+      titleToSearch: "",
+      year: "",
+      director: "",
+      plot: "",
+      genre: ""
     }
   }
 
@@ -21,11 +25,15 @@ class App extends Component {
   //Update these methods to make axios calls to OMDB and update this.state.movie with the response from the server
    _searchByTitle = (event) => {
      event.preventDefault();
-     const title = event.target.titleToSearch;
+     const title = event.target.title.value;
      axios.get(`http://www.omdbapi.com/?t=${title}&apikey=d31f1a94`)
       .then( (res) => {
         this.setState({
-            titleToSearch: res.data.Title
+            titleToSearch: res.data.Title,
+            year: res.data.Year,
+            director: res.data.Director,
+            plot: res.data.Plot,
+            genre: res.data.Genre
         });
         console.log(res.data);
       })
@@ -37,8 +45,8 @@ class App extends Component {
 
    _searchById = (event) => {
      event.preventDefault();
-     const id = event.target.idToSearch.value;
-    axios.get(`http://www.omdbapi.com/?i=${this.state.idToSearch}&apikey=d31f1a94`)
+     const id = event.target.title.value;
+    axios.get(`http://www.omdbapi.com/?i=${id}&apikey=d31f1a94`)
       .then( (res) => {
         this.setState({
             idToSearch: res.data.imdbID
@@ -62,7 +70,11 @@ class App extends Component {
           titleToSearch={this.state.titleToSearch}
           idToSearch={this.state.idToSearch}
         />
-        <Movie movie={this.state.movie} />
+        <Movie 
+        title={this.state.titleToSearch}
+        year={this.state.year}
+        director={this.state.director}
+        plot={this.state.plot} />
       </div>
     );
   }

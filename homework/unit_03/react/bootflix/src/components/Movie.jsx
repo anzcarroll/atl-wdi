@@ -7,13 +7,13 @@ const Movie = (props) => {
   return (
     <section id="movie-listing">
       <div className="movie">
-        <h3>{props.Title}</h3>
+        <h3>{props.title}</h3>
         <p>
-          <strong>Released:</strong>{props.Released}<br />
-          <strong>Directed By:</strong>{props.Director}<br />
-          <em>Genre: {props.Genre}</em>
+          <strong>Released:</strong>{props.released}<br />
+          <strong>Directed By:</strong>{props.director}<br />
+          <em>Genre: {props.genre}</em>
         </p>
-        <p>{props.Plot}</p>
+        <p>{props.plot}</p>
       </div>
     </section>
   );
