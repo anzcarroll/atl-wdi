@@ -8,15 +8,15 @@ const Search = () => {
 
       <div className="search">
         <form id="title-search-form" method="get">
-          <input type="text" name="title" placeholder="Enter movie title" />
-          <input type="submit" value="Search for this title" />
+          <input type="text" name="title" value={this.titleToSearch} onChange={this.titleChange} placeholder="Enter movie title" />
+          <input onClick={this.searchByTitle} type="submit" value="Search for this title" />
         </form>
       </div>
 
       <div className="search">
         <form id="id-search-form" method="get">
-          <input type="text" name="id" placeholder="Enter omdb movie ID" />
-          <input type="submit" value="Search by ID" />
+          <input type="text" name="id" value={this.idToSearch} onChange={this.idChange} placeholder="Enter omdb movie ID" />
+          <input onClick={this.searchById} type="submit" value="Search by ID" />
         </form>
       </div>
 
