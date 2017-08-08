@@ -2,22 +2,21 @@ import React, { Component } from "react";
 
 // Update this Movie component with info from OMDB
 // BONUS: Use OMDB's Poster API to add a poster to each movie.
-class Movie extends Component {
-  render() {
+const Movie = (props) => {
+  
   return (
     <section id="movie-listing">
       <div className="movie">
-        <h3>{this.props.movie.Title}</h3>
+        <h3>{props.Title}</h3>
         <p>
-          <strong>Released:</strong>{this.props.movie.Released}<br />
-          <strong>Directed By:</strong>{this.props.movie.Director}<br />
-          <em>Genre: {this.props.movie.Genre}</em>
+          <strong>Released:</strong>{props.Released}<br />
+          <strong>Directed By:</strong>{props.Director}<br />
+          <em>Genre: {props.Genre}</em>
         </p>
-        <p>{this.props.movie.Plot}</p>
+        <p>{props.Plot}</p>
       </div>
     </section>
   );
-}
 };
 
 export default Movie;

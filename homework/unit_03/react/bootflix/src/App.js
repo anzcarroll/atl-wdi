@@ -4,14 +4,13 @@ import axios from 'axios';
 import Header from './components/Header';
 import Search from './components/Search';
 import Movie from './components/Movie';
-import example from './omdbExample.json'
+
 
 
 class App extends Component {
   constructor(){
     super();
     this.state = {
-      movie: "",
       idToSearch: "",
       titleToSearch: ""
     }
@@ -20,11 +19,15 @@ class App extends Component {
  
 
   //Update these methods to make axios calls to OMDB and update this.state.movie with the response from the server
-   _searchByTitle = () => {
-     axios.get(`http://www.omdbapi.com/?apikey=d31f1a94&t=${this.state.titleToSearch}`)
-      .then( (movie) => {
-        this.setState({movie: movie.data});
-        console.log(movie);
+   _searchByTitle = (event) => {
+     event.preventDefault();
+     const title = event.target.titleToSearch;
+     axios.get(`http://www.omdbapi.com/?t=${title}&apikey=d31f1a94`)
+      .then( (res) => {
+        this.setState({
+            titleToSearch: res.data.Title
+        });
+        console.log(res.data);
       })
       .catch( (error) => {
         console.log(error);
@@ -32,24 +35,21 @@ class App extends Component {
   }
 
 
-   _searchById = () => {
-    axios.get(`http://www.omdbapi.com/?apikey=d31f1a94&i=${this.state.idToSearch}`)
-      .then( (movie) => {
-        this.setState({movie: movie.data});
-        console.log(movie);
+   _searchById = (event) => {
+     event.preventDefault();
+     const id = event.target.idToSearch.value;
+    axios.get(`http://www.omdbapi.com/?i=${this.state.idToSearch}&apikey=d31f1a94`)
+      .then( (res) => {
+        this.setState({
+            idToSearch: res.data.imdbID
+        });
+        console.log(res.data);
       })
       .catch( (error) => {
         console.log(error);
       })
   }
 
-  _titleChange = (event) => {
-    this.setState({titleToSearch: event.target.value})
-  }
-
-  _idChange = (event) => {
-    this.setState({idToSearch: event.target.value})
-  }
 
   
   //Pass _searchByTitle, _searchById, and this.state.movie to it's appropriate child components.
@@ -61,8 +61,7 @@ class App extends Component {
           searchById={this._searchById}
           titleToSearch={this.state.titleToSearch}
           idToSearch={this.state.idToSearch}
-          handleTitleChange={this._titleChange}
-          handleIdChange={this._idChange} />
+        />
         <Movie movie={this.state.movie} />
       </div>
     );
