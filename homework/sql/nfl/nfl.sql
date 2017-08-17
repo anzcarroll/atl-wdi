@@ -74,5 +74,43 @@ STEP3
  Peyton Manning          | QB
  Elvis Dumervil          | DE
 
- 
 
+
+    PT9:
+    SELECT name FROM players ORDER BY salary DESC LIMIT 1;
+      name
+----------------
+ Peyton Manning
+
+
+    PT10:
+ SELECT name, position FROM players ORDER BY salary ASC LIMIT 100;
+          name          | position
+------------------------+----------
+ Phillip Dillard        |
+ Eric Kettani           | RB
+ Greg Orton             | WR
+
+
+    PT11:
+    SELECT AVG(salary) FROM players WHERE position='DE';
+         avg
+----------------------
+ 2161326.377049180328
+(1 row)
+
+    PT12:
+    SELECT players.name, teams.name FROM players, teams WHERE players.team_id=teams.id AND teams.name LIKE 'Buffalo Bills';
+
+    PT13:
+    SELECT SUM(players.salary) FROM players, teams WHERE players.team_id=teams.id AND teams.name LIKE 'New York Giants';
+   sum
+----------
+ 74179466
+(1 row)
+
+    PT14:
+    SELECT players.name FROM players, teams WHERE players.team_id=teams.id AND teams.name LIKE 'Green Bay Packers' ORDER BY salary ASC LIMIT 1;
+      name
+----------------
+ Shaky Smithson
