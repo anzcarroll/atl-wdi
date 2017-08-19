@@ -26,16 +26,13 @@ Methods are defined in classes
 
 
 5. Why does single Responsibility matter?
+A class that has more than one responsibility is difficult to reuse and you increase your applications chances of breaking 
+if you depend on classes that do too much 
 
-```
-Your Answer Here
-```
 
 6. What does `attr_reader` do?
 
-```
-Your Answer Here
-```
+
 
 7. What are 4 benefits Metz outlines for methods that have a single responsibility?
 
