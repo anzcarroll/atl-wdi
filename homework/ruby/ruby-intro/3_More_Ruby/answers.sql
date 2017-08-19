@@ -4,28 +4,26 @@
 Answer should be no more than a couple of sentences. Refer to the reading.
 
 1. According to Metz, what is Object-oriented design about?
-
-```
-Your Answer Here
-```
+-Its about Managing dependencies;
+-not following fixed set of rules but, using tools, principles and patterns.
 
 2. What does SOLID stand for?
+S - Single-responsiblity principle: a class should only have one job
+O - Open-closed principle: open for extention, closed for modification.
+L - Liskov substitution principle: every subclass should be substitutable for their parent class.
+I - Interface segregation principle: A client should never be forced to have UI that it doesnt use
+    and clients shouldnt be forced to depend on methods they dont use.
+D - Dependency Inversion Principle: high level module must not depend on the low level module, but they should depend on abstractions.
 
-```
-Your Answer Here
-```
 
 3. Ruby is a class-based object-oriented language. What does that mean?
+Ruby combines data and behavior in a single object where as other languages 
+divide them into two seperate never-meeting objects
 
-```
-Your Answer Here
-```
 
 4. Where are methods defined in Ruby?
+Methods are defined in classes
 
-```
-Your Answer Here
-```
 
 5. Why does single Responsibility matter?
 
