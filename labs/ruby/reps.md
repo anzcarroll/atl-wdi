@@ -68,7 +68,6 @@ hash_switcher([ {"hello" => "world"}, {"yo" => "lo"} ])
 ### Round 4
 
 HINT: look up arrays each_index method
-
 Write a method `export_hash` that accepts arguments, both arrays.
     - If one or both of the arguments are not arrays, then the method should return `nil`
     - If both arguments are arrays then, but both are not of equal length
