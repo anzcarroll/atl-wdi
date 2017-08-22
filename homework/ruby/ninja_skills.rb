@@ -96,25 +96,61 @@
 # # Commit -m "6. Arrays skills"
 
 
-# 7
-# Create a variable called myFavoriteAnimals and set it equal to a Hash with five animals. 
+# # 7
+# # Create a variable called myFavoriteAnimals and set it equal to a Hash with five animals. 
 
- my_fav_animals = { 
-     "Edgar" => "Donkey", 
-     "Jolene" => "Horse", 
-     "Fifi"  => "Cat", 
-     "Hussun" => "Husky", 
-     "Rascal" => "Hedgehog" }
+#  my_fav_animals = { 
+#      "Edgar" => "Donkey", 
+#      "Jolene" => "Horse", 
+#      "Fifi"  => "Cat", 
+#      "Hussun" => "Husky", 
+#      "Rascal" => "Hedgehog" }
      
-# Change value of Edgar to be "Bear"
-my_fav_animals['Edgar'] = "Bear"
-puts my_fav_animals
-# Create a variable favoriteMovie and set it equal to a new, empty Hash.
-my_fav_movie = {}
-# Edit the favoriteMovie hash and add a movie key with a value of your choosing.
-my_fav_movie['pretty_woman'] = true
-puts my_fav_movie
+# # Change value of Edgar to be "Bear"
+# my_fav_animals['Edgar'] = "Bear"
+# puts my_fav_animals
+# # Create a variable favoriteMovie and set it equal to a new, empty Hash.
+# my_fav_movie = {}
+# # Edit the favoriteMovie hash and add a movie key with a value of your choosing.
+# my_fav_movie['pretty_woman'] = true
+# puts my_fav_movie
 # Commit -m "7. Hashes skills"
+
+
+
+
+# 8
+# Create a variable 
+first_range = (1..10)
+# Convert firstRange to an array.
+puts first_range.each.to_a
+# Create a variable 
+second_range = (1..999)
+# # Create a For loop that changes every value in firstRange 
+# to a String and using a p statement print 
+# those values out to the terminal
+for each in second_range do 
+    puts each.to_s
+end 
+# Create a variable x and set it equal to zero
+x = 0
+# Create a While loop that prints every value in secondRange while x < 50.
+while x < 50
+    puts x
+    x += 1
+ break if x == 50
+end 
+
+# Using .each multiply every other value in firstRange 
+# by two and push those values into a new Array. 
+# Print that array to the terminal.
+
+first_range.each()
+# Using .map and if/else statements, 
+# iterate through firstRange and change every even value 
+# to a string. If the value is odd, don't change the value to a string.
+
+# Commit -m "8. I'm a Ninja Warrior. Bow down to me."
 
 
 
