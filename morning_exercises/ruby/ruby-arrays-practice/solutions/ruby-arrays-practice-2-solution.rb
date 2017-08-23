@@ -1,3 +1,4 @@
+
 require 'ostruct'
 require 'Date'
 
@@ -19,7 +20,7 @@ users = [
 ]
 
 first_user = users.min_by do |user|
-    user[:created_at]
+    user[:created_at].first
 end
 
 puts '###############################'
